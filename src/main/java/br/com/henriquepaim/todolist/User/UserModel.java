@@ -1,9 +1,29 @@
 package br.com.henriquepaim.todolist.User;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+@Data
+@Entity(name = "tb_user")
 public class UserModel {
 
-    public String userName;
-    public String name;
-    public String password;
+    @Id
+    @GeneratedValue(generator = "UUID")
+    private UUID id;
+
+    @Column(unique = true, name = "userName")
+    private String userName;
+    private String name;
+    private String password;
+
+    @CreationTimestamp
+    private LocalDateTime createAt;
 
 }
