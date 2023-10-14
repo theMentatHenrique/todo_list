@@ -1,5 +1,6 @@
 package br.com.henriquepaim.todolist.User;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.apache.catalina.User;
 import org.aspectj.weaver.ast.Var;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,9 @@ public class UserController {
         if (byName != null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("usuário já existe");
         }
+        userModel.setPassword(BCrypt.withDefaults().
+                hashToString(12, userModel.getPassword().toCharArray()));
+
         UserModel userCreated = this.userRepository.save(userModel);
         return ResponseEntity.status(HttpStatus.OK).body(userCreated);
     }
