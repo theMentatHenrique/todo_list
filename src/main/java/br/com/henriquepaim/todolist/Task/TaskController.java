@@ -39,7 +39,7 @@ public class TaskController {
     @GetMapping("/")
     public List<Taskmodel> list(HttpServletRequest request) {
         Object userId = request.getAttribute("userId");
-        List<Taskmodel> byUserId = this.taskRepository.findByUserId((UUID) userId);
+        List<Taskmodel> byUserId = this.taskRepository.findByIdUser((UUID) userId);
         return byUserId;
     }
 
