@@ -23,7 +23,7 @@ public class FilterTaskAuth extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String servletPath = request.getServletPath();
 
-        if (servletPath.equals("/tasks/")) {
+        if (servletPath.startsWith("/tasks/")) {
             String authorization = request.getHeader("Authorization");
             String subs = authorization.substring("Basic".length()).trim();
             byte[] decode = Base64.getDecoder().decode(subs);
@@ -32,16 +32,16 @@ public class FilterTaskAuth extends OncePerRequestFilter {
             String[] split = decodificado.split(":");
             String userName = split[0];
             String password = split[1];
-            System.out.println("Username=" + userName);
-            System.out.println("password=" + password);
             UserModel byName = userRepository.findByName(userName);
-            if(userRepository.findByName(userName) == null) {
+
+            if(byName == null) {
                 response.sendError(401);
                 return;
             }
             BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), byName.getPassword());
 
-            if (result.verified){
+            if (result.verified) {
+                request.setAttribute("userId", byName.getId());
                 filterChain.doFilter(request, response);
             } else {
                 response.sendError(401);
