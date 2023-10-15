@@ -1,3 +1,29 @@
 Manifest-Version: 1.0
 Main-Class: br.com.henriquepaim.todolist.TodoListApplication
+Class-Path: spring-boot-starter-3.1.4.jar angus-activation-2.0.1.jar jak
+ arta.transaction-api-2.0.1.jar spring-jcl-6.0.12.jar antlr4-runtime-4.1
+ 0.1.jar log4j-to-slf4j-2.20.0.jar HikariCP-5.0.1.jar spring-boot-starte
+ r-logging-3.1.4.jar jackson-databind-2.15.2.jar spring-boot-starter-tom
+ cat-3.1.4.jar aspectjweaver-1.9.20.jar spring-data-commons-3.1.4.jar sp
+ ring-jdbc-6.0.12.jar snakeyaml-1.33.jar spring-boot-starter-data-jpa-3.
+ 1.4.jar jakarta.activation-api-2.1.2.jar jakarta.inject-api-2.0.1.jar j
+ ackson-annotations-2.15.2.jar spring-boot-starter-aop-3.1.4.jar jboss-l
+ ogging-3.5.3.Final.jar tomcat-embed-websocket-10.1.13.jar jakarta.persi
+ stence-api-3.1.0.jar logback-classic-1.4.11.jar jackson-module-paramete
+ r-names-2.15.2.jar micrometer-observation-1.11.4.jar tomcat-embed-core-
+ 10.1.13.jar spring-data-jpa-3.1.4.jar spring-boot-starter-jdbc-3.1.4.ja
+ r bytes-1.5.0.jar jakarta.annotation-api-2.1.1.jar hibernate-core-6.2.9
+ .Final.jar spring-webmvc-6.0.12.jar spring-boot-devtools-3.1.4.jar jack
+ son-core-2.15.2.jar log4j-api-2.20.0.jar txw2-4.0.3.jar jaxb-runtime-4.
+ 0.3.jar tomcat-embed-el-10.1.13.jar hibernate-commons-annotations-6.0.6
+ .Final.jar spring-aspects-6.0.12.jar h2-2.1.214.jar jandex-3.0.5.jar ja
+ xb-core-4.0.3.jar spring-tx-6.0.12.jar spring-core-6.0.12.jar slf4j-api
+ -2.0.9.jar logback-core-1.4.11.jar spring-web-6.0.12.jar byte-buddy-1.1
+ 4.8.jar spring-aop-6.0.12.jar spring-boot-autoconfigure-3.1.4.jar bcryp
+ t-0.10.2.jar jackson-datatype-jdk8-2.15.2.jar jackson-datatype-jsr310-2
+ .15.2.jar istack-commons-runtime-4.1.2.jar spring-boot-3.1.4.jar jul-to
+ -slf4j-2.0.9.jar spring-boot-starter-web-3.1.4.jar spring-beans-6.0.12.
+ jar spring-orm-6.0.12.jar jakarta.xml.bind-api-4.0.1.jar spring-context
+ -6.0.12.jar spring-boot-starter-json-3.1.4.jar spring-expression-6.0.12
+ .jar classmate-1.5.1.jar micrometer-commons-1.11.4.jar
 
