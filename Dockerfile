@@ -12,4 +12,4 @@
 
    COPY --from=build /out/artifacts/TodoList.jar app.jar
 
-   ENTRYPOINT["java", "-jar", "app.jar"]
+   ENTRYPOINT ["java", "-jar", "app.jar"]
