@@ -11,6 +11,6 @@
    FROM openjdk:17-jdk-slim
    EXPOSE 8080
 
-   COPY --from=build /out/artifacts/TodoList.jar app.jar
+   COPY /out/artifacts/TodoList.jar app.jar
 
    ENTRYPOINT ["java", "-jar", "app.jar"]
