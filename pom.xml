@@ -10,7 +10,7 @@
     </parent>
     <groupId>br.com.henriquepaim</groupId>
     <artifactId>TodoList</artifactId>
-    <version>1.0.0</version>
+    <version>1.0</version>
     <name>TodoList</name>
     <description>TodoList</description>
     <properties>
